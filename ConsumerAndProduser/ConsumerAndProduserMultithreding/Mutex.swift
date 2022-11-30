@@ -18,11 +18,11 @@ final class Mutex: Lock {
         pthread_mutex_init(&mutex, nil)
         return mutex
     }()
-    
+
     func lock() {
         pthread_mutex_lock(&mutex)
     }
-    
+
     func unlock() {
         pthread_mutex_unlock(&mutex)
     }
